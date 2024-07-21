@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cada Momento Juntos: Melany & Rony</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url(https://st2.depositphotos.com/55330332/49311/i/450/depositphotos_493119948-stock-photo-purple-pastel-color-brick-cement.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #5a4b8c;
+            font-family: Arial, sans-serif;
+            font-size: 1.5em;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #FF0000; /* Rojo */
+        }
+        .tabs {
+            display: flex;
+            cursor: pointer;
+            margin-top: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px 5px 0 0;
+            padding: 5px;
+            width: 100%;
+            max-width: 800px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .tab-button {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            background-color: #f9f9f9;
+            margin-right: 1px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .tab-button:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.02);
+        }
+        .tab-button.active {
+            background-color: #f2c037;
+            border-bottom: 1px solid #fff;
+            font-weight: bold;
+            box-shadow: inset 0 -2px 0 #5a4b8c;
+        }
+        .tab-content {
+            border: 1px solid #ccc;
+            border-radius: 0 0 5px 5px;
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            text-align: left;
+            background-color: #f2c037;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            overflow-y: auto; /* Permite el desplazamiento si el contenido es demasiado largo */
+            height: 400px; /* Ajusta la altura del área de contenido */
+        }
+        .tab-item {
+            display: none;
+        }
+        .tab-item.active {
+            display: block;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery a {
+            margin: 10px;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .gallery a:hover {
+            transform: scale(1.05);
+        }
+        .gallery img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #5a4b8c;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .message-form {
+            margin-top: 20px;
+        }
+        .message-form input,
+        .message-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .message-form button {
+            background-color: #5a4b8c;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .message-form button:hover {
+            background-color: #4a3a68;
+        }
+        .message-list {
+            margin-top: 20px;
+            width: 100%;
+            max-height: 200px; /* Ajusta la altura máxima del área de mensajes */
+            overflow-y: auto; /* Permite el desplazamiento si hay demasiados mensajes */
+            text-align: left;
+        }
+        .message-list .message {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .message-list .message strong {
+            color: #5a4b8c;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hola mi amor <br>Bienvenida a nuestra página bb<3</h1>
+
+    <div class="tabs">
+        <div class="tab-button active" data-tab="tab1">Momentos Especiales</div>
+        <div class="tab-button" data-tab="tab2">Un Mensaje Especial</div>
+        <div class="tab-button" data-tab="tab3">Galería</div>
+        <div class="tab-button" data-tab="tab4">Deja un Mensaje</div>
+    </div>
+
+    <div class="tab-content">
+        <div id="tab1" class="tab-item active">
+            <h2>Nuestros Momentos Especiales</h2>
+            <p>Estoy seguro de que poco a poco llenaremos esto de muchos momentos futuros y otros del pasado que recordaremos juntos.<br><br>
+            <h3>05/02/2024</h3><br>
+            <p>Uno de mis recuerdos favoritos es nuestro primer beso, que ocurrió el 5 de febrero en el cine. Fue un momento mágico, lleno de nervios y ternura, que siempre recordaré con una sonrisa.</p>
+            <p>Desde entonces, hemos tenido muchos momentos íntimos, también la primera vez que me hacen gogogoxd, y especiales. Cada uno de ellos ha sido una forma hermosa de mostrar cuánto nos queremos. Estos recuerdos no solo han hecho que nuestra relación sea más fuerte, sino que también han añadido un toque especial a nuestra historia juntos. ¡Son momentos que siempre vamos a guardar en el corazón!</p>
+            </p>
+        </div>
+        <div id="tab2" class="tab-item"> 
+            <h2>Un Mensaje Especial</h2>
+            <p>Melicita de mi corazón, seguramente tendrás muchas preguntas. ¿Quieres saber por qué hice una página de nosotros? La historia es corta y simple, bb: hace muy poco me contaste sobre ChatGPT y el uso que le dabas, y me pareció muy útil. Manoseando :v un poco, vi que podía poner códigos de programación y quise ver qué tan difícil era hacer una página web. Hoy, 20/07/24, hice esta página, aprendí mucho al hacerla y seguiré mejorando, bb.</p>
+            <p>No estuvimos en un buen momento, amor; tú estás muy enferma con tos, náuseas y escalofríos. Al menos espero que esto te alegre, mi amor. Te amo demasiado, eres mi mundo. Aún siento que es muy pronto para dar por terminada nuestra página, bb.</p>
+            <p>Le puse a esto un mensaje especial :3 ¿Por qué? Para escribirte todo lo que pienso y siento sobre ti, mi amor. Pienso que eres una persona excepcional, eres única, toda una mujer que se hace respetar. Hermosa, mi amor, toda tu carita está tallada de una manera perfecta, sensual, que con solo mirarte me dan deseos de hacerte mía en cualquier lugar o momento. Eres inteligente como Einstein, y no exagero, bb; te admiro por eso. Eres muy perseverante, mi amor; te veo muy decidida en tu carrera y conmigo, y eso amo de ti, mi reina. Te admiro mucho, mi amor, y por ti me inspiro a mejorar como persona, como enamorado y como todo lo que puedo ser para ti. Tú estás muy marcada en mi corazón, bb; tú me complementas en mi felicidad y cada problema me afecta como a ti. Eso nos conecta, bb; nuestros corazones, de alguna manera, están conectados.</p>
+            <p>Lo que siento por ti, mi amor, es muy difícil de explicar. Desde la primera vez que nos vimos, nunca me imaginé lo importante que llegarías a ser en mi vida. Llegaste a mi vida porque el destino lo quiso. Estuve en muchos colegios, conocí muchas personas, pero ninguna como tú. Mis días en San Marcos del Sur fueron buenos recuerdos gracias a ti. Disfruté los momentos a tu lado y me gustaría mucho poder vivirlos de nuevo. Eres una chica que se hace querer, bb, y yo logré amarte con todo mi corazoncito. Desde entonces, amor, hemos pasado por muchas cosas, compartido muchos secretos, y ahora eres mi confidente, mi compañera, mi mejor amiga y mi amor eterno. Solo siento que eres tú la mujer con la que quiero compartir mi vida, mi hogar, mis cosas. Quiero seguir construyendo muchos recuerdos hermosos contigo y explorar nuevas emociones, experiencias y momentos maravillosos que el futuro nos tiene preparado.</p>
+            <p>Gracias por todo, amor, y no, bb, no me despido de ti. Solo quiero agradecerte por todo lo que das en esta relación. Te quiero, te amo.</p>
+            <p>Con todo mi amor, tu Ronycito.</p>
+        </div>
+        <div id="tab3" class="tab-item">
+            <h2>Galería</h2>
+            <div class="gallery">
+                <a href="https://i.ibb.co/b1qsVQv/Whats-App-Image-2024-07-20-at-5-29-26-PM-1.jpg" target="_blank">
+                    <img src="https://i.ibb.co/b1qsVQv/Whats-App-Image-2024-07-20-at-5-29-26-PM-1.jpg" alt="Foto 1">
+                </a>
+                <a href="https://i.ibb.co/4mp0b5c/1.jpg" target="_blank">
+                    <img src="https://i.ibb.co/4mp0b5c/1.jpg" alt="Foto 2">
+                </a>
+                <a href="https://i.ibb.co/0r5FZRD/Whats-App-Image-2024-07-20-at-5-27-58-PM.jpg" target="_blank">
+                    <img src="https://i.ibb.co/0r5FZRD/Whats-App-Image-2024-07-20-at-5-27-58-PM.jpg" alt="Foto 3">
+                </a>
+            </div>
+        </div>
+        <div id="tab4" class="tab-item">
+            <h2>Deja un Mensaje</h2>
+            <form class="message-form" id="messageForm">
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+            <div class="message-list" id="messageList">
+                <!-- Los mensajes se mostrarán aquí -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Hecho con amor por Ronycito tu bbcito<3
+    </footer>
+
+    <script>
+        document.querySelectorAll('.tab-button').forEach(tabButton => {
+            tabButton.addEventListener('click', () => {
+                const targetTab = tabButton.getAttribute('data-tab');
+
+                // Cambia la clase activa en los botones de pestañas
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                tabButton.classList.add('active');
+
+                // Muestra el contenido de la pestaña seleccionada
+                document.querySelectorAll('.tab-item').forEach(tabContent => tabContent.classList.remove('active'));
+                document.getElementById(targetTab).classList.add('active');
+            });
+        });
+
+        // Inicializa la primera pestaña como activa
+        document.querySelector('.tab-button').classList.add('active');
+        document.querySelector('.tab-item').classList.add('active');
+
+        // Función para agregar un mensaje a la lista
+        function addMessage(name, message) {
+            const messageList = document.getElementById('messageList');
+            const messageItem = document.createElement('div');
+            messageItem.classList.add('message');
+            messageItem.innerHTML = `<strong>${name}</strong>: ${message}`;
+            messageList.appendChild(messageItem);
+        }
+
+        // Manejo del formulario de mensajes
+        document.getElementById('messageForm').addEventListener('submit', (event) => {
+            event.preventDefault(); // Evita que se envíe el formulario de la manera tradicional
+
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+
+            if (name && message) {
+                addMessage(name, message); // Agrega el mensaje a la lista
+                document.getElementById('messageForm').reset(); // Resetea el formulario
+            }
+        });
+    </script>
+</body>
+</html>
